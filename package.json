@@ -1,0 +1,16 @@
+{
+  "name": "cognito-authentication-client",
+  "version": "1.0.0",
+  "description": "frontend client to cognito-authentication",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:elhenrysoyyo/cognito-authentication-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
