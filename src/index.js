@@ -9,7 +9,7 @@ class CognitoAuthentication {
   #storage
 
   constructor () {
-    this.#appName = appName
+    this.#appName = appName?.toUpperCase()
     this.#loginURL = loginURL
     this.#storage = sessionStorage
   }
