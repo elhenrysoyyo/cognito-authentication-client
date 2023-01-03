@@ -3,7 +3,7 @@ frontend client to use with cognito-authentication
 
 ## Install
 ```
-npm install cognito-authentication-client
+npm install @pd-js/cognito-authentication-client
 ```
 
 ## Requirements
@@ -17,7 +17,7 @@ VITE_LOGIN_URL=<example http://localhost:3000/login>
 
 ## Usage
 ```
-import CognitoAuthentication from 'cognito-authentication-client'
+import CognitoAuthentication from '@pd-js/cognito-authentication-client'
 
 const cognito = new CognitoAuthentication()
 
