@@ -35,7 +35,7 @@ class CognitoAuthentication {
 
   #redirectLogin (url) {
     this.#fetchData(url)
-      .then((data) => window.location.href = data.loginURL)
+      .then((data) => { window.location.href = data.loginURL })
       .catch((error) => console.error(error))
   }
 
@@ -44,15 +44,13 @@ class CognitoAuthentication {
     return !!token
   }
 
-  login () {
+  async login () {
     const params = new URLSearchParams(window.location.search)
     const code = params.get('code')
     if (code) {
       const url = `${this.#loginURL}?code=${code}`
-      return this.#getToken(`${this.#loginURL}?code=${code}`)
-        .then((sessionData) => { 
-          if (sessionData) this.#setToken(sessionData)
-        })
+      const sessionData = await this.#getToken(url)
+      if (!sessionData?.error) return this.#setToken(sessionData)
     }
     return this.#redirectLogin(this.#loginURL)
   }
