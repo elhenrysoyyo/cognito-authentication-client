@@ -1,14 +1,10 @@
-const {
-  VITE_APP_NAME: appName,
-  VITE_LOGIN_URL: loginURL
-} = import.meta.env
-
 class CognitoAuthentication {
   #appName
   #loginURL
   #storage
 
-  constructor () {
+  constructor (appName = 'my_App', loginURL = 'localhost') {
+    console.log({ appName, loginURL })
     this.#appName = appName?.toUpperCase()
     this.#loginURL = loginURL
     this.#storage = sessionStorage

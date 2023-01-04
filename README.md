@@ -6,20 +6,14 @@ frontend client to use with cognito-authentication
 npm install @pd-js/cognito-authentication-client
 ```
 
-## Requirements
-- Use with Vite
-
-Environment variables
-```
-VITE_APP_NAME=<example_app>
-VITE_LOGIN_URL=<example http://localhost:3000/login>
-```
-
 ## Usage
 ```
+const APP_NAME=<example_app
+const LOGIN_URL=<example http://localhost:3000/login>
+
 import CognitoAuthentication from '@pd-js/cognito-authentication-client'
 
-const cognito = new CognitoAuthentication()
+const cognito = new CognitoAuthentication(APP_NAME, LOGIN_URL)
 
 cognito.isAuthenticated() // It should show if exists access_token stored
 cognito.login() // It redirect and manipulate the login process
