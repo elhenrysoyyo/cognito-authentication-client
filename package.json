@@ -1,6 +1,6 @@
 {
   "name": "@pd-js/cognito-authentication-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "frontend client to cognito-authentication",
   "main": "./src/index.js",
   "scripts": {
